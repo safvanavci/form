@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-image: url(bg.jpg);
+  background-size: 100% 100%;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+}
+
+.login-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+form {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+.form-header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.form-header div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-header a {
+  color: #0040ff;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.form-header h2 {
+  font-size: 14px;
+  color: #ffffff61;
+  margin-top: 10px;
+}
+
+.form-box {
+  position: relative;
+}
+
+.form-box input {
+  width: 100%;
+  height: 45px;
+  font-size: 20px;
+  outline: none;
+  background-color: #ffffff00;
+  border-bottom: 1px solid #ffffff61;
+  color: #fff;
+}
+
+.form-box label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  pointer-events: none;
+  font-size: 20px;
+  transition: 0.4s;
+  color: #ffffff61;
+}
+
+.form-box input:focus ~ label,
+.form-box input:valid ~ label {
+  top: 0px;
+  font-size: 15px;
+  color: #0040ff;
+}
+
+.form-box span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  background-color: #0040ff;
+  height: 1px;
+  width: 0;
+  transition: 0.4s;
+}
+
+.form-box input:focus ~ span::before,
+.form-box input:valid ~ span::before {
+  width: 100%;
+}
+
+.form-bottom {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  color: #ffffff61;
+  font-size: 14px;
+}
+
+button {
+  height: 50px;
+  border-radius: 10px;
+  font-size: 17px;
+  background-color: #0040ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-bottom a {
+  color: #fff;
+  text-decoration: none;
+}
